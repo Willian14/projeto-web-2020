@@ -1,0 +1,35 @@
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+@WebServlet(urlPatterns = {"/cliente.do", "/clienteController", "/clienteServlet"})	
+public class ClienteServlet extends HttpServlet{
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.setCharacterEncoding("UTF-8");
+		resp.getWriter().print("Chamou pelo método Get!!!!");
+	}
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.setCharacterEncoding("UTF-8");
+		resp.getWriter().print("Chamou pelo método Post!!!");
+	}
+	
+	@Override
+	protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.setCharacterEncoding("UTF-8");
+		resp.getWriter().print("Chamou pelo método Delete!");
+	}
+	
+	@Override
+	protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.setCharacterEncoding("UTF-8");
+		resp.getWriter().print("Chamou pelo método Put!");
+	}
+
+}
