@@ -22,6 +22,7 @@ public class ClienteServlet extends HttpServlet{
 		System.out.println("Inicializando o Servlet...");
 		
 		super.init();
+		// teste
 	}
 	
 	@Override
